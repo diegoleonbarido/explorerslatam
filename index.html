@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Where are the LatAm explorers?</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+ 
+<style>
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGllZ29sZW9uYmFyaWRvIiwiYSI6ImNrMm5sY3Q4NDB1MHkzY28zdnRvOTFvdHcifQ.F77Y0P8PKmY-W0iAz0Vc-g';
+ 
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/satellite-v9',
+center: [-74.068640, 4.70578],
+zoom: 3
+});
+ 
+map.on('load', function() {
+ 
+// Add a layer showing the places.
+map.addLayer({
+"id": "places",
+"type": "symbol",
+"source": {
+"type": "geojson",
+"data": {
+"type": "FeatureCollection",
+"features": [{
+"type": "Feature",
+"properties": {
+"description": "<strong>Alberto Yanoski</strong><p>Ciencia Pura, Exploracion. Estudio la anatomía, relaciones de parentesco y paleobiología de los dinosaurios carnívoros.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-57.5405378,- 25.3090281]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong> Matias Motta</strong>.<p> Estudio la anatomía, relaciones de parentesco y paleobiología de los dinosaurios carnívoros. </p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-58.437881,-34.605008]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Ismael Vásquez</strong><p>Conservación, Educación. Conservación y fortalecimiento de las culturas indigenas de México</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-99.1487, 19.3412]
+}
+}, {
+"type": "Feature",
+"properties": {
+"description": "<strong>Ismael Vásquez</strong><p>Conservación, Educación. Conservación y fortalecimiento de las culturas indigenas de México</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-98.09036,16.65219]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Gustavo Aranjo</strong><p>Conservación, Sustentabilidad. Mares y zona costera</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-96.720387, 17.039798]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Gustavo Aranjo</strong><p>Conservación, Sustentabilidad. Mares y zona costera</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-97.075035, 15.856595]
+}
+
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Gustavo Aranjo</strong><p>Conservación, Sustentabilidad. Mares y zona costera</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [ -96.493656, 15.658336]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Gustavo Aranjo</strong><p>Conservación, Sustentabilidad. Mares y zona costera</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-96.127779, 15.755862]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Gustavo Aranjo</strong><p>Conservación, Sustentabilidad. Mares y zona costera</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-95.722860, 15.905039]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Gustavo Aranjo</strong><p>Conservación, Sustentabilidad. Mares y zona costera</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-110.374750, 24.152160]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Pao</strong><p>Conservación, Ciencia Pura	Eco-fisciología en comunidades coralinas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-110.374750, 24.152160]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Sebastian Oriolo</strong><p>Geología, particularmente enfocada en supercontinentes antiguos y el origen de la Patagonia.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [ -58.3712, -34.6083]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Anny Peralta</strong><p>Conservación, Ciencia Pura	fauna terrestre, principalmente anfibios y reptiles.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-116.6203,31.8638]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Paula Iturralde-Pólit</strong><p>Ciencia Pura, Storytelling	Conservación, cambio climático y murciélagos. Mi proyecto se enfoca en saber cómo podrían adaptarse los murciélagos al aumento de la temperatura, para que no les afecte en su capacidad de econtrar el alimento.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-84.05083333,9.9369444]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Carmen</strong><p>Conservación, Educación	Ecologia de bosques tropicales y calidad de agua de rios y quebradas amazonicas</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-69.1891300,-12.5933100]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Carmen</strong><p>Conservación, Educación	Ecologia de bosques tropicales y calidad de agua de rios y quebradas amazonicas</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [ -80.3081074,25.6670476]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Armando Vega</strong><p>Exploracion, Storytelling	Cultura, paisaje, medio ambiente, derechos humanos.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-101.591232 ,17.667286]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Armando Vega</strong><p>Exploracion, Storytelling	Cultura, paisaje, medio ambiente, derechos humanos.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-71.978446 ,-13.522800]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Pedro Peloso</strong><p>Ciencia Pura, Storytelling	Biodiversidade (anfibios y reptiles)</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-48.7404628 ,-1.2729905]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong> Mari Silvi Fenoglio</strong><p>Conservación, Sustentabilidad	Ecología urbana de comunidades de insectos, particularmente en techos verdes</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-5.526148 ,37.658974]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Janni Benavides</strong><p>Educación, Storytelling.	Nos enfocamos en la creación de herramientas pedagógicas musicales y artísticas para el conocimiento y conservación de la biodiversidad y las culturas indígenas de los ecosistemas tropicales.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-74.116140 ,11.144874]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Carolina Chong-Montenegro</strong><p>Conservación, Exploracion	Mares, peces, y pesquerías</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-73.120519,40.910898]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Carolina Chong-Montenegro</strong><p>Conservación, Exploracion	Mares, peces, y pesquerías</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-77.349364,6.007854]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Carolina Chong-Montenegro</strong><p>Conservación, Exploracion	Mares, peces, y pesquerías</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-79.546461,8.944693]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Marina Rivero</strong><p>Conservación de tapires</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-92.644797,16.746173]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Marina Rivero</strong><p>Conservación de tapires</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-93.185408,15.885568]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Marina Rivero</strong><p>Conservación de tapires</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-91.378485,16.793531]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniela Cafaggi</strong><p>Conservación, Educación.	Diversidad de fauna en zonas arqueológicas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-99.148608,19.3593846]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniela Cafaggi</strong><p>Conservación, Educación.	Diversidad de fauna en zonas arqueológicas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-88.568631, 20.683323]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniela Cafaggi</strong><p>Conservación, Educación.	Diversidad de fauna en zonas arqueológicas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-89.597567, 21.091345]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniela Cafaggi</strong><p>Conservación, Educación.	Diversidad de fauna en zonas arqueológicas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-88.135929, 20.892351]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniela Cafaggi</strong><p>Conservación, Educación.	Diversidad de fauna en zonas arqueológicas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-89.597567, 21.091345 ]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniel Arauz</strong><p>Conservación, Exploracion. Tortugas marinas</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-84.83836, 9.97625]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Tarin Toledo Aceves</strong><p>Conservación, Ciencia Pura. Conservación de la biodiversidad y manejo sustentable de Bosque de niebla</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-96.5911, 19.1123]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniel Villema</strong><p>Conservación, Educación	Educación marina - contaminación con enfoque en plásticos y fauna especialmente tiburones.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-90.304468, -0.742625]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Tomas Ayuso</strong><p>Educación, Storytelling	Migracion y Culturas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-87.20681, 14.0818]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Leonora </strong><p>Conservación, Ciencia Pura	Carnívoros y murciélagos, selvas tropicales humedas y secas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-90.912804, 16.150494]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Leonora </strong><p>Conservación, Ciencia Pura	Carnívoros y murciélagos, selvas tropicales humedas y secas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-105.044188, 19.468525]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Leo Lanna</strong><p>Exploracion, Storytelling	Investigación, conservación, difusión y registros de vida selvage en la Mata Atlántica de Brasil, con enfoque en las mantis religiosas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-43.224174, -22.970519]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>David Rodriguez</strong><p>Conservación, Exploracion	Selva, componente florístico de ecosistemas de alta montaña tropicales.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-74.0657, 4.6012]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>David Rodriguez</strong><p>Conservación, Exploracion	Selva, componente florístico de ecosistemas de alta montaña tropicales.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-75.213478, 4.428242]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Antonio de la Torre</strong><p>Conservación, Ciencia aplicada. selva, jaguares, conflictos, ecología del movimiento, foto-trampeo, conservación </p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-92.635509, 16.736330]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Mauricio Cantor</strong><p>Ciencia Pura. Comportamiento animal</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-48.7838,-28.4748]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Liliana Gutierrez</strong><p>Sustentabilidad, pesquerías, comunidades costeras, mujeres.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-110.300499,24.1443691]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Diego Pol</strong><p>Ciencia Pura, Exploracion	Paleontología, dinosaurios, evolución.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-65.3076, -43.2493]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Estefania</strong><p>Ciencia Pura	Plantas en paredes escarpadas en montañas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [ -98.661467, 19.156953]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Estefania</strong><p>Ciencia Pura	Plantas en paredes escarpadas en montañas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-115.126216, 51.055688]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Estefania</strong><p>Ciencia Pura	Plantas en paredes escarpadas en montañas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-114.099810, 51.029218]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Liana Homi</strong><p>Ciencia Pura.	Birds.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-47.944183, -15.961227]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Rocio Gomez</strong><p>Ciencia Pura	Antropología genética.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-99.1276627, 19.4284706]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Helder Espirito Santo</strong><p>Ciencia Pura. Ecology of mangrove fish.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-48.4902, -1.45576]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Helder Espirito Santo</strong><p>Ciencia Pura. Ecology of mangrove fish.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-39.9541, -5.4026]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Karime Castillo</strong><p>Patrimonio Cultural.	Arqueología de México Colonial. </p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-118.2437, 34.0522]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Karime Castillo</strong><p>Patrimonio Cultural.	Arqueología de México Colonial. </p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-99.1332, 19.4326]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Mauricio Monteiro Filho</strong><p>Storytelling	Documentales de impacto social.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-46.625290,-23.533773]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Tania Pelamatti</strong><p>Conservación	mantas gigantes, contaminación por plástico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-110.329327,24.153079]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Tania Pelamatti</strong><p>Conservación	mantas gigantes, contaminación por plástico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-110.970785,18.747969]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Tania Pelamatti</strong><p>Conservación	mantas gigantes, contaminación por plástico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-105.448342,20.499472]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Marissa Cuevas Flores</strong><p>Tecnología. Exceso de nutrientes en cuerpos de agua</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-101.332113,20.720369]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Daniel</strong><p>Conservación	El ambiente marino.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-39.2653,-17.7336]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Rodolfo Salas Gismondi</strong><p>Ciencia Pura	Evolución de cocodrilos y sus ecosistemas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-73.029066, -3.335534]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Rodolfo Salas Gismondi</strong><p>Ciencia Pura	Evolución de cocodrilos y sus ecosistemas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-71.408154, -14.794187]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Rodolfo Salas Gismondi</strong><p>Ciencia Pura	Evolución de cocodrilos y sus ecosistemas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-74.700619, -15.583656]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Varun Swamy</strong><p>Ecología aplicada. Bosques amazonicos, ecología de regeneración, monitoreo ecológico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-71.407785, -11.881025]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Varun Swamy</strong><p>Ecología aplicada. Bosques amazonicos, ecología de regeneración, monitoreo ecológico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-69.176501, -12.594187]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Varun Swamy</strong><p>Ecología aplicada. Bosques amazonicos, ecología de regeneración, monitoreo ecológico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-70.099646, -12.568865]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Varun Swamy</strong><p>Ecología aplicada. Bosques amazonicos, ecología de regeneración, monitoreo ecológico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-69.040588,  -12.528895]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Varun Swamy</strong><p>Ecología aplicada. Bosques amazonicos, ecología de regeneración, monitoreo ecológico.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-69.609380,  -13.133666]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Roberto Rosado Ramirez</strong><p>Ciencia Pura	Mayas prehispánicos.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-89.623645,  20.966892]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Roberto Rosado Ramirez</strong><p>Ciencia Pura	Mayas prehispánicos.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-87.677278,  42.051137]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Sara Pineda</strong><p>Sustentabilidad.	Cartografía participativa en Áreas Protegidas.</p>",
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-99.2,  19.3667]
+}
+
+},{
+"type": "Feature",
+"properties": {
+"description": "<strong>Sara Pineda</strong><p>Sustentabilidad.	Cartografía participativa en Áreas Protegidas.</p>",
+"URL":'<a href="https://www.cnn.com/" target="_blank"> https://www.cnn.com/</a>',
+"icon": "circle"
+},
+"geometry": {
+"type": "Point",
+"coordinates": [-87.4225,  20.9606]
+}
+
+}
+
+,{"type": "Feature","properties": {"description": "<strong>Catalina Velasco</strong><p>Ciencia. Ecología de bosques de kelps.</p>","URL":'<a href="@cata.fotosub (instagram)" target="_blank">@cata.fotosub (instagram)</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -70.91,-53.62]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Nicolas Perez</strong><p>Geology. Uplift of the Northern Andes.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-76.839225,1.011722]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Nicolas Perez</strong><p>Geology. Uplift of the Northern Andes.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-75.828746,6.94531]}}
+
+
+,{"type": "Feature","properties": {"description": "<strong>Elton John de Lirio</strong><p>Systematics, Conservation and Evolution of Plants.</p>","URL":'<a href="https://www.instagram.com/lirioeltonj/?hl=pt" target="_blank">https://www.instagram.com/lirioeltonj/?hl=pt</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-46.731442,-23.56506]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Catalina Velasco</strong><p>Ciencia. Ecologia de bosques de kelps.</p>","URL":'<a href="@cata.fotosub (instagram)" target="_blank">@cata.fotosub (instagram)</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -70.91,-53.62]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Nicolas Perez</strong><p>Geology. Uplift of the Northern Andes.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -76.839225,1.011722]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Nicolas Perez</strong><p>Geology. Uplift of the Northern Andes.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -75.828746,6.945310]}}
+
+ 
+,{"type": "Feature","properties": {"description": "<strong>Elton John de Lirio</strong><p>Systematics, Conservation and Evolution of Plants.</p>","URL":'<a href="https://www.instagram.com/lirioeltonj/?hl=pt" target="_blank">https://www.instagram.com/lirioeltonj/?hl=pt</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -46.731442,-23.565060]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Mauricio Cantor</strong><p>Ecology of interactions among predators.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -48.833,-28.333]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Karen DeMatteo</strong><p>Ecologia Aplicada - Conservacion de Carnivoros / Presas en el Bosque Atlantico.</p>","URL":'<a href="www.facebook.com/gotscat" target="_blank">www.facebook.com/gotscat</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -53.913,-26.383]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Ramiro Barberena</strong><p>Arqueologia y biogeografia humana en los Andes.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -69.364833,-32.605006]}}
+
+
+,{"type": "Feature","properties": {"description": "<strong>Ramiro Barberena</strong><p>Arqueologia y biogeografia humana en los Andes.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -69.702353,-34.232301]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Denise Pozzi-Escot</strong><p>Pachacamac: Descubriendo mi Museo. Educational workshops for local children in an archaeological site museum.</p>","URL":'<a href="https://www.instagram.com/museopachacamac/" target="_blank">https://www.instagram.com/museopachacamac/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-76.899451,-12.259084]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Helder Espirito-Santo</strong><p>Ciencia Pura. Ecology of freshwater and estuarine fish..</p>","URL":'<a href="@peixiencia" target="_blank">@peixiencia</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-50.462313,2.128087]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Helder Espirito-Santo</strong><p>Ciencia Pura. Ecology of freshwater and estuarine fish..</p>","URL":'<a href="@peixiencia" target="_blank">@peixiencia</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -48.5118042,-0.6310678]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Helder Espirito-Santo</strong><p>Ciencia Pura. Ecology of freshwater and estuarine fish..</p>","URL":'<a href="@peixiencia" target="_blank">@peixiencia</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-35.236333,-5.676278]}}
+
+
+,{"type": "Feature","properties": {"description": "<strong>Helder Espirito-Santo</strong><p>Ciencia Pura. Ecology of freshwater and estuarine fish..</p>","URL":'<a href="@peixiencia" target="_blank">@peixiencia</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -59.9673610,-2.9475692]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Silvana Gallegos Sanchez</strong><p>PhD student working in Freshwater ecology in Andean Ecosystems. .</p>","URL":'<a href="@selvagasan;  https://ibn.conicet.gov.ar" target="_blank">@selvagasan;  https://ibn.conicet.gov.ar</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-78.151026,-0.360409]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Silvana Gallegos Sanchez</strong><p>PhD student working in Freshwater ecology in Andean Ecosystems. .</p>","URL":'<a href="@selvagasan;  https://ibn.conicet.gov.ar" target="_blank">@selvagasan;  https://ibn.conicet.gov.ar</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -65.325208,-26.776722]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Jens</strong><p>Antropologia ambiental. Estudio de la relacion entre humanos y rios..</p>","URL":'<a href="https://bestiasdelsursalvaje.org/" target="_blank">https://bestiasdelsursalvaje.org/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -71.64,-37.88]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Pedro Peloso</strong><p>Biodiversity. Documentation and Conservation..</p>","URL":'<a href="instagram (@pedro_peloso)" target="_blank">instagram (@pedro_peloso)</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-48.4782699,-1.3308403]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Silvia Pavan</strong><p>Biologist, researcher. Diversity of South American mammals.</p>","URL":'<a href="www.facebook.com/silvia.e.pavan" target="_blank">www.facebook.com/silvia.e.pavan</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -48.4902,-1.4557]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Silvia Pavan</strong><p>Biologist, researcher. Diversity of South American mammals.</p>","URL":'<a href="www.facebook.com/silvia.e.pavan" target="_blank">www.facebook.com/silvia.e.pavan</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -77.39415,-7.58977]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Rosa Vasquez</strong><p>Research and storytelling. Chemistry and Biology of Amazonian microbes..</p>","URL":'<a href="rosavasqueze" target="_blank">rosavasqueze</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -83.7457,42.2230]}}
+
+
+,{"type": "Feature","properties": {"description": "<strong>Rosa Vasquez</strong><p>Research and storytelling. Chemistry and Biology of Amazonian microbes..</p>","URL":'<a href="rosavasqueze" target="_blank">rosavasqueze</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ 76.2411,9.9208]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Paola Rodriguez Troncoso</strong><p>Science conservation. Coral reef Ecology .</p>","URL":'<a href="@pao_rdgzt" target="_blank">@pao_rdgzt</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[  -105.228077,20.631045]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Paola Rodriguez Troncoso</strong><p>Science conservation. Coral reef Ecology .</p>","URL":'<a href="@pao_rdgzt" target="_blank">@pao_rdgzt</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -104.7115373,19.2250984]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Paola Rodriguez Troncoso</strong><p>Science conservation. Coral reef Ecology .</p>","URL":'<a href="@pao_rdgzt" target="_blank">@pao_rdgzt</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -106.422017505438,21.4584858]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Cristian Lagger</strong><p>Investigacion y Fotografia submarina. Ecologia Marina y Cambio Climatico. Ecologia de comunidades bentonicas. .</p>","URL":'<a href="@laggercristian (IG)" target="_blank">@laggercristian (IG)</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-64.1810500,-31.4135000]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Cristian Lagger</strong><p>Investigacion y Fotografia submarina. Ecologia Marina y Cambio Climatico. Ecologia de comunidades bentonicas. .</p>","URL":'<a href="@laggercristian (IG)" target="_blank">@laggercristian (IG)</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-62.2333333,-58.666666666666664]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Victor Salinas Silva</strong><p>Educacion geografica. Profesores rurales y territorialidad.</p>","URL":'<a href="https://storymaps.arcgis.com/stories/c1cd72fbe8964729a85a0ae37a6dff17" target="_blank">https://storymaps.arcgis.com/stories/c1cd72fbe8964729a85a0ae37a6dff17</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -70.466415,-34.264544]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Sebastian Apesteguia</strong><p>Earth Sciences, Vertebrate Paleontology.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ 68.6802,39.6145]}}
+
+
+ 
+,{"type": "Feature","properties": {"description": "<strong>Sebastian Apesteguia</strong><p>Earth Sciences, Vertebrate Paleontology.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ 68.6101,39.7206]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Sebastian Apesteguia</strong><p>Earth Sciences, Vertebrate Paleontology.</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ 58.4409,34.6103]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Clara Fortes BrandÌ£o</strong><p>Anthropology; Indigenous Ethnology..</p>","URL":'<a href="@clarafortesbrandao" target="_blank">@clarafortesbrandao</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -52.941484,-9.988183]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Ricardo Azarcoya</strong><p>Fotografo documental enfocado a proyectos en comunidades indigenas y de conservacion.</p>","URL":'<a href="https://www.instagram.com/rikky.azarcoya/" target="_blank">https://www.instagram.com/rikky.azarcoya/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -99.6675828,21.3110903]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Ricardo Azarcoya</strong><p>Fotografo documental enfocado a proyectos en comunidades indigenas y de conservacion.</p>","URL":'<a href="https://www.instagram.com/rikky.azarcoya/" target="_blank">https://www.instagram.com/rikky.azarcoya/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -65.118811,-54.657931]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Ricardo Azarcoya</strong><p>Fotografo documental enfocado a proyectos en comunidades indigenas y de conservacion.</p>","URL":'<a href="https://www.instagram.com/rikky.azarcoya/" target="_blank">https://www.instagram.com/rikky.azarcoya/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -91.581321,16.977262]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andreu Rico</strong><p>Conservacion. Riesgos ecologicos de la contaminacion en el Rio Amazonas.</p>","URL":'<a href="www.silentamazon.com" target="_blank">www.silentamazon.com</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -59.96666667,-3.15893056]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Juan Arias</strong><p>Storytelling.  Cultural practices vs. Conservation.</p>","URL":'<a href="www.instagram.com/juan_punto" target="_blank">www.instagram.com/juan_punto</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -76.532630,3.454309]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Juan Arias</strong><p>Storytelling.  Cultural practices vs. Conservation.</p>","URL":'<a href="www.instagram.com/juan_punto" target="_blank">www.instagram.com/juan_punto</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-75.504329,10.382469]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Agustina Besada</strong><p>Educacion x inspiracion. Desplastificacion. Rediseno de relacion humana con el Plastico..</p>","URL":'<a href="instagram @unplastify" target="_blank">instagram @unplastify</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -58.3816,-34.6037]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Lia  Nahomi Kajiki</strong><p>Ciencia Pura, Behavioural Ecology, Sexual Selection and Mating Systems of Neotropical Birds.</p>","URL":'<a href="http://liakajiki.webflow.io/" target="_blank">http://liakajiki.webflow.io/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -47.939540,-15.953650]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Juliana M Ferreira</strong><p>counter wildlife trafficking / combate ao trafico de silvestres.</p>","URL":'<a href="https://www.instagram.com/freelandbrasil/  https://www.facebook.com/freelandbrasil/  www.freeland.org.br" target="_blank">https://www.instagram.com/freelandbrasil/  https://www.facebook.com/freelandbrasil/  www.freeland.org.br</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -46.6388,-23.5489]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Janni Benavides</strong><p>Educacion, Storytelling. MÌ¼sica y arte para el conocimiento de los ecosistemas tropicales, su biodiversidad y sus culturas indigenas..</p>","URL":'<a href="@jacanajacana" target="_blank">@jacanajacana</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -74.107216,11.145838]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Ruth Metzel</strong><p>La Fundacion Pro Eco Azuero trabajamos en restauracion de ecosistemas, manejo sostenible de tierras, reforestacion y educacion ambiental en la peninsula de Azuero, Panama. .</p>","URL":'<a href="@proecoazuero en insta, facebook, twitter, https://www.youtube.com/channel/UCn2BLy-s-fiiNZVz12T_yAw" target="_blank">@proecoazuero en insta, facebook, twitter, https://www.youtube.com/channel/UCn2BLy-s-fiiNZVz12T_yAw</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -80.025230,7.534466]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Pedro Torres</strong><p>Ingenieria. Energias renovables..</p>","URL":'<a href="http://www.gedae.ufpa.br/" target="_blank">http://www.gedae.ufpa.br/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -48.567302,-1.440444]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Carmen Chavez</strong><p>Conservacion de bosques Amazonicos, educacion para la conservacion. Sur Este Peru.</p>","URL":'<a href="#carmenACEER" target="_blank">#carmenACEER</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -69.191205,-12.627802]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Carmen Chavez</strong><p>Conservacion de bosques Amazonicos, educacion para la conservacion. Sur Este Peru.</p>","URL":'<a href="#carmenACEER" target="_blank">#carmenACEER</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -70.909202,-12.264702]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Pablo Borboroglu</strong><p>Ecologia y Conservacion de pinguinos. Aeas protegidas terrestres y marinas..</p>","URL":'<a href="IG @pabloborboroglu" target="_blank">IG @pabloborboroglu</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -65.03851,-42.7692]}}
+
+
+,{"type": "Feature","properties": {"description": "<strong>Pablo Borboroglu</strong><p>Ecologia y Conservacion de pinguinos. Aeas protegidas terrestres y marinas..</p>","URL":'<a href="IG @pabloborboroglu" target="_blank">IG @pabloborboroglu</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -66.533,-45.133]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Pablo Borboroglu</strong><p>Ecologia y Conservacion de pinguinos. Aeas protegidas terrestres y marinas..</p>","URL":'<a href="IG @pabloborboroglu" target="_blank">IG @pabloborboroglu</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[422999,-53]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Pablo Borboroglu</strong><p>Ecologia y Conservacion de pinguinos. Aeas protegidas terrestres y marinas..</p>","URL":'<a href="IG @pabloborboroglu" target="_blank">IG @pabloborboroglu</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[639992,44]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Pablo Borboroglu</strong><p>Ecologia y Conservacion de pinguinos. Aeas protegidas terrestres y marinas..</p>","URL":'<a href="IG @pabloborboroglu" target="_blank">IG @pabloborboroglu</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[075223,-42]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Sara Pineda </strong><p>Sistemas socioambientales, metodos participativos.</p>","URL":'<a href="https://www.instagram.com/sarpineda/" target="_blank">https://www.instagram.com/sarpineda/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ - 87.3779,21.5239]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Maria Silvina Fenoglio</strong><p>Ecologia urbana. Entomologia.</p>","URL":'<a href="ma_silvifenoglio (Instagram)" target="_blank">ma_silvifenoglio (Instagram)</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -64.1811,-31.4135]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Diego M. Peralta</strong><p>Ciencia Pura. Genetica de Poblaciones del Leon Marino Sudamericano.</p>","URL":'<a href="https://www.instagram.com/dieggarp" target="_blank">https://www.instagram.com/dieggarp</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -59.087,-34.578]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Diego M. Peralta</strong><p>Ciencia Pura. Genetica de Poblaciones del Leon Marino Sudamericano.</p>","URL":'<a href="https://www.instagram.com/dieggarp" target="_blank">https://www.instagram.com/dieggarp</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -68.6989,-50.2698]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Diego M. Peralta</strong><p>Ciencia Pura. Genetica de Poblaciones del Leon Marino Sudamericano.</p>","URL":'<a href="https://www.instagram.com/dieggarp" target="_blank">https://www.instagram.com/dieggarp</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -65.1181,-54.6569]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Rocio Gomez</strong><p>Antropologia Genetica. Colonizacion de America.</p>","URL":'<a href="rogomezo_dna" target="_blank">rogomezo_dna</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -102.553,23.635]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Rocio Gomez</strong><p>Antropologia Genetica. Colonizacion de America.</p>","URL":'<a href="rogomezo_dna" target="_blank">rogomezo_dna</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -96.713226,17.054230]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Rocio Gomez</strong><p>Antropologia Genetica. Colonizacion de America.</p>","URL":'<a href="rogomezo_dna" target="_blank">rogomezo_dna</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -92.255280,16.258600]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Marina Arbetman</strong><p>Conservacion/Ecologia molecular. Invasiones de abejorros.</p>","URL":'<a href="https://sites.google.com/view/ecopol/home?authuser=0" target="_blank">https://sites.google.com/view/ecopol/home?authuser=0</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -71.313913,-41.142587]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Priscilla Campos</strong><p>Conservation. Ecology reef corals..</p>","URL":'<a href="www.oceanlive.home.blog" target="_blank">www.oceanlive.home.blog</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-38.627182,12.810398]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Lucia Rodriguez-Planes</strong><p>Conservacion. Manejo de especies invasoras..</p>","URL":'<a href="IG @luciarplanes " target="_blank">IG @luciarplanes </a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -68.506231,-54.84175]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Laura Rodriguez</strong><p>Conservacion. Conectividad genetica. Corales mesofoticos. Ecologia. Geomorfologia..</p>","URL":'<a href="instagram: @laurodrim" target="_blank">instagram: @laurodrim</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-75.618472,10.261833 ]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Marissa</strong><p>Biotech water treatment.</p>","URL":'<a href="www.microterra.com.mx" target="_blank">www.microterra.com.mx</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -101.329199,20.720274]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Giulliana Appel</strong><p>Ciencia pura. Ecology of bats..</p>","URL":'<a href="NaN" target="_blank">NaN</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ 60.00000000,2.50000000]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Martin Blettler</strong><p>Ciencia aplicada. Medio-ambiente. Contaminacion plastica. Grandes rios.</p>","URL":'<a href="https://www.researchgate.net/profile/Martin_Blettler " target="_blank">https://www.researchgate.net/profile/Martin_Blettler </a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -60.52379,-31.73196]}}
+
+ 
+,{"type": "Feature","properties": {"description": "<strong>Vinicius Alberici</strong><p>Ecologia y conservacion del oso hormiguero.</p>","URL":'<a href="https://www.instagram.com/bandeiraserodovias/" target="_blank">https://www.instagram.com/bandeiraserodovias/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[107483,-21]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Vinicius Alberici</strong><p>Ecologia y conservacion del oso hormiguero.</p>","URL":'<a href="https://www.instagram.com/bandeiraserodovias/" target="_blank">https://www.instagram.com/bandeiraserodovias/</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[638160,-21]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Antonio de la Torre</strong><p>Wildlife Ecology & Conservation.</p>","URL":'<a href="Instagram: @jaguaresdelaselvamaya" target="_blank">Instagram: @jaguaresdelaselvamaya</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -90.938489,16.777347]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Antonio de la Torre</strong><p>Wildlife Ecology & Conservation.</p>","URL":'<a href="Instagram: @jaguaresdelaselvamaya" target="_blank">Instagram: @jaguaresdelaselvamaya</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -90.863875,16.152929]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Antonio de la Torre</strong><p>Wildlife Ecology & Conservation.</p>","URL":'<a href="Instagram: @jaguaresdelaselvamaya" target="_blank">Instagram: @jaguaresdelaselvamaya</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -91.213268,16.333373]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Antonio de la Torre</strong><p>Wildlife Ecology & Conservation.</p>","URL":'<a href="Instagram: @jaguaresdelaselvamaya" target="_blank">Instagram: @jaguaresdelaselvamaya</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -93.434121,15.970808]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Begona Inarritu</strong><p>Conservacion y Conducta Animal.</p>","URL":'<a href="@begambilia" target="_blank">@begambilia</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -99.177,19.432]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Begona Inarritu</strong><p>Conservacion y Conducta Animal.</p>","URL":'<a href="@begambilia" target="_blank">@begambilia</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ 31.647,-113.481]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Angelo Bernardino</strong><p>Land use changes in Amazon mangroves.</p>","URL":'<a href="Brazil blue carbon" target="_blank">Brazil blue carbon</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[-47.955,0.7567]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -74.726901,-8.812827]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -80.279194,25.718492]}}
+
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -77.036091,-12.104493]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -86.953647,12.669584]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -74.568713,-8.393279]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -96.784336,32.846291]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Andres Ruzo</strong><p>Geotermia y conservacion .</p>","URL":'<a href="https://www.instagram.com/andresruzo/?hl=en" target="_blank">https://www.instagram.com/andresruzo/?hl=en</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -81.070843,-4.111194]}}
+ 
+,{"type": "Feature","properties": {"description": "<strong>Victoria Jimenez Esquivel</strong><p>Manejo Pesquero. Tecnologia y Sistemas de Informacion Geografica.</p>","URL":'<a href="IG: mar.jimeneze" target="_blank">IG: mar.jimeneze</a>',"icon": "circle"},"geometry": {"type": "Point","coordinates":[ -110.339076,24.142712]}}
+
+]
+}
+},
+"layout": {
+"icon-image": "{icon}-15",
+"icon-allow-overlap": true
+}
+});
+ 
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+closeButton: true,
+closeOnClick: true,
+});
+ 
+map.on('mouseenter', 'places', function(e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+var url_explorer = e.features[0].properties.URL;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates)
+.setHTML(description + url_explorer)
+.addTo(map);
+});
+ 
+});
+</script>
+ 
+</body>
+</html>
